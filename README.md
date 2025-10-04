@@ -1,13 +1,21 @@
-# Time-Series Weather Forecasting Model
+# Time-Series Weather Forecasting Model 🌦️
 
-This project is an end-to-end machine learning workflow for time series forecasting. It uses a Python script to fetch multi-year historical weather data from the official NOAA (National Oceanic and Atmospheric Administration) API. The data is then cleaned, processed, and used to train a machine learning model to predict the maximum daily temperature.
+This project demonstrates a complete end-to-end machine learning workflow for time series forecasting. It uses a Python script to fetch multi-year historical weather data from the official NOAA (National Oceanic and Atmospheric Administration) API. The data is then cleaned, processed, and used to train a machine learning model to predict the maximum daily temperature.
 
-## Features
+## Final Result
+The final `RandomForestRegressor` model achieves a Mean Absolute Error (MAE) of approximately **3.4°F** on the test set, demonstrating its ability to accurately forecast daily maximum temperatures.
+
+### Prediction Visualization
+The plot below compares the model's predicted temperatures (orange) against the actual temperatures (blue) on the unseen test data.
+![Actual vs. Predicted Plot](path/to/your/plot_image.png)
+*(**Note**: You will need to take a screenshot of your final graph, add it to your repository, and update the path above.)*
+
+## Key Features
 - Fetches multi-year historical data from the NOAA Climate Data Online API.
 - Cleans and prepares raw API data into a usable time series format using Pandas.
 - Performs feature engineering by extracting `month`, `day_of_year`, `day_of_week`, and `lag` features.
-- Trains a `RandomForestRegressor` model to forecast future temperatures.
-- Evaluates the model's performance using Mean Absolute Error (MAE).
+- Trains and evaluates multiple models, including `RandomForestRegressor`.
+- Evaluates model performance using Mean Absolute Error (MAE).
 - Visualizes the model's predictions against actual values using Matplotlib.
 
 ## Technologies Used
@@ -22,20 +30,30 @@ This project is an end-to-end machine learning workflow for time series forecast
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/weather-forecasting-model.git](https://github.com/your-username/weather-forecasting-model.git)
+    git clone [https://github.com/ardadalyanci/weather-forecasting-model.git](https://github.com/ardadalyanci/weather-forecasting-model.git)
     cd weather-forecasting-model
     ```
 
-2.  **Install dependencies:**
-    ```bash
-    pip install pandas requests scikit-learn matplotlib
+2.  **Create a `requirements.txt` file:**
+    Create a file named `requirements.txt` and paste the following lines into it. This is the standard way to manage project dependencies.
+    ```text
+    pandas
+    requests
+    scikit-learn
+    matplotlib
     ```
 
-3.  **Get a NOAA API Token:**
+3.  **Install dependencies:**
+    Run the following command in your terminal to install all the necessary libraries from your `requirements.txt` file.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Get a NOAA API Token:**
     - Visit the [NOAA Token Request page](https://www.ncdc.noaa.gov/cdo-web/token) and get a free API token sent to your email.
 
-4.  **Update the Script:**
+5.  **Update the Script:**
     - Open the Python script/notebook and replace `'YOUR_TOKEN_HERE'` with the token you received.
 
-5.  **Run the script:**
+6.  **Run the script:**
     - Execute the Python script or run the cells in the notebook to fetch the data, train the model, and see the results.
