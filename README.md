@@ -7,8 +7,9 @@ The final `RandomForestRegressor` model achieves a Mean Absolute Error (MAE) of 
 
 ### Prediction Visualization
 The plot below compares the model's predicted temperatures (orange) against the actual temperatures (blue) on the unseen test data.
-![Actual vs. Predicted Plot](path/to/your/plot_image.png)
-*(**Note**: You will need to take a screenshot of your final graph, add it to your repository, and update the path above.)*
+![Actual vs. Predicted Plot]
+<img width="2471" height="1127" alt="image" src="https://github.com/user-attachments/assets/7e219e5e-eef5-4f75-8ca2-5dd579ef29a0" />
+
 
 ## Key Features
 - Fetches multi-year historical data from the NOAA Climate Data Online API.
